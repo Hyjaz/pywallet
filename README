@@ -13,9 +13,12 @@ Options:
   --label=LABEL         label shown in the adress book (defaults to '')
   --testnet             use testnet subdirectory and address type
   --namecoin            use namecoin address type
+  --litecoin            use litecoin address type
+  --megacoin            use megacoin address type
   --otherversion=OTHERVERSION
                         use other network address type, whose version is
-                        OTHERVERSION
+                        OTHERVERSION, like Litecon is"48", megacoin is "50"
+                        To see https://en.bitcoin.it/wiki/List_of_address_prefixes for more type.
   --info                display pubkey, privkey (both depending on the
                         network) and hexkey
   --reserve             import as a reserve key, i.e. it won't show in the

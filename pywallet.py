@@ -4774,8 +4774,14 @@ if __name__ == '__main__':
 	parser.add_option("--testnet", dest="testnet", action="store_true",
 		help="use testnet subdirectory and address type")
 
+	parser.add_option("--litecoin", dest="litecoin", action="store_true",
+		help="use litecoin address type")
+
 	parser.add_option("--namecoin", dest="namecoin", action="store_true",
 		help="use namecoin address type")
+
+	parser.add_option("--megacoin", dest="megacoin", action="store_true",
+		help="use megacoin address type")
 
 	parser.add_option("--otherversion", dest="otherversion",
 		help="use other network address type, whose version is OTHERVERSION")
@@ -4991,13 +4997,17 @@ if __name__ == '__main__':
 		db_dir += "/testnet"
 		addrtype = 111
 
-	if options.namecoin or options.otherversion is not None:
+	if options.namecoin or options.litecoin or options.megacoin or options.otherversion is not None:
 		if options.datadir is None and options.keyinfo is None:
 			print("You must provide your wallet directory")
 			exit(0)
 		else:
 			if options.namecoin:
 				addrtype = 52
+			if options.litecoin:
+				addrtype = 48
+			if options.megacoin:
+				addrtype = 50
 			else:
 				addrtype = int(options.otherversion)
 
