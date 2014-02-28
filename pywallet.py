@@ -81,6 +81,7 @@ aversions = {};
 for i in range(256):
 	aversions[i] = "version %d" % i;
 aversions[0] = 'Bitcoin';
+aversions[50] = 'Megacoin';
 aversions[48] = 'Litecoin';
 aversions[52] = 'Namecoin';
 aversions[111] = 'Testnet';
